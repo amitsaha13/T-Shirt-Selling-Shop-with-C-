@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "display";
+}
+
+
+
+<h1>Display</h1>
+
+
+<div class="card mb-3 mt-3 ">
+    <div class="card-body">
+        <h6 class="text-center">Code  1 </h6>
+        <h6 class="text-center"> Purple T-Shirt </h6><p class="text-center text-danger">15% Discount</p>
+        <img class="img-fluid" src="~/pictures/tShirtimage/t1.jpg" alt="image not found ">
+        <h6 class="text-center"> &#2547; 590.00 </h6>
+        <form method="post" class="from-container from-container" action="isplayProduct" enctype="multipart/form-data">
+            <div>
+                <input type="text" name="id" class="from-control text-center col-12 mb-1" placeholder="Please insert T-Shirt's Code">
+
+                <input type="text" name="size" class="from-control text-center col-12 mb-1" placeholder="S,M,L,XL,XXL">
+                <input type="text" name="quantity" class="from-control text-center col-12 mb-1" placeholder="Quantity">
+                <input type="text" name="price" class="from-control text-center col-12 mb-1" placeholder="price">
+
+            </div>
+            <div>
+                <input type="submit" name="add" value="Add to Cart" class="btn btn-success btn-block">
+
+            </div>
+        </form>
+    </div>
+
+</div>
+
+

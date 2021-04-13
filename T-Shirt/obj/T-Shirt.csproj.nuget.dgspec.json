@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\CSE 3.2\\C# lab\\project\\T-Shirt\\T-Shirt\\T-Shirt.csproj": {}
+  },
+  "projects": {
+    "G:\\CSE 3.2\\C# lab\\project\\T-Shirt\\T-Shirt\\T-Shirt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\CSE 3.2\\C# lab\\project\\T-Shirt\\T-Shirt\\T-Shirt.csproj",
+        "projectName": "T-Shirt",
+        "projectPath": "G:\\CSE 3.2\\C# lab\\project\\T-Shirt\\T-Shirt\\T-Shirt.csproj",
+        "packagesPath": "C:\\Users\\amit\\.nuget\\packages\\",
+        "outputPath": "G:\\CSE 3.2\\C# lab\\project\\T-Shirt\\T-Shirt\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\amit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

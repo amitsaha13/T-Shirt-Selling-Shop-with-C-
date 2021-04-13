@@ -1,0 +1,22 @@
+﻿@model System.Data.DataTable
+@{
+    ViewData["Title"] = "showUsers";
+}
+
+<h1>showUsers</h1>
+<table>
+    <tr>
+        <th>User id </th>
+        <th> Email</th>
+        <th>Password1 </th>
+        <th>Password2 </th>
+    </tr>
+    @for(int i =0; i< Model.Rows.Count; i++)
+    {
+        <tr>@Model.Rows[i][1]</tr>
+        <tr>@Model.Rows[i][2]</tr>
+        <tr>@Model.Rows[i][3]</tr>
+        <tr>@Model.Rows[i][4]</tr>
+    }
+</table>
+

@@ -1,0 +1,188 @@
+﻿
+@{
+    ViewData["Title"] = "Order";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="text-center" style="padding-bottom:5%">
+            <h1>Dear Customer Your Total bill is: @ViewData["TotalBill"]</h1>
+        </div>
+
+        <div class="container text-right">
+
+
+            <form method="POST" class="from-container from-container mt-6 mb-6" action="InsertProduct" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    
+                    
+                    
+                    <div class="row" style="padding-bottom:1%;">
+                        <div class="col-md-3">
+                            <label class="font-weight-bold">Your name</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input name="name" type="text" class="form-control " rows="0" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom:1%;">
+                        <div class="col-md-3">
+                            <label class="font-weight-bold" style="padding-right:2%;">Current Address</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input name="address" type="text" class="form-control" id="name" placeholder="Enter current address">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom:1%;">
+                        <div class="col-md-3">
+                            <label class="font-weight-bold">Phone number</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input name="quantity" type="text" class="form-control" id="" placeholder="Enter phone noumber">
+                        </div>
+                    </div>
+                    
+
+                    <div class="row" style="padding-bottom:1%;">
+                        <div class="col-md-10">
+                            <div class="modal-footer border-top-0 d-flex justify-content-lg-end">
+                                <button type="submit" name="insert" class="btn btn-dark btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <footer class="page-footer font-small unique-color-dark">
+
+
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left mt-5" style="background-color: black; color:white;">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="padding-top:25px;">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold"><img src="~/pictures/logo1.jpg" width="70%" height="50%" alt="Alternate Text" /></h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit.
+                    </p>
+
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="padding-top:10px;>
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                        </br>
+                        <a href="#!">MDWordPress</a>
+                        </br>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="padding-top:10px;>
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Your Account</a>
+                        </br>
+                        <a href="#!">Shipping Rates</a>
+                        </br>
+                        <a href="#!">Help</a>
+                        </br>
+                        <a href="#!">Terms & Conditions</a>
+                        </br>
+                        <a href="#!">Privacy</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="padding-top:10px;>
+
+                    <!-- Links -->
+                    <h3 class="text-uppercase font-weight-bold">Contact</h3>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> 101,102 Love Road,Dhaka</br>
+
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</br>
+
+                        <i class="fas fa-phone mr-3"></i> +088 01686 00 11 99
+                    </p>
+
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color:black;color:white;">
+            <p>
+                © 2019 Copyright:
+                <a href="#">acube.com</a></br>
+                <a href="#">Back to top</a>
+            </p>
+
+        </div>
+
+        <!-- Copyright -->
+
+    </footer>
+    </div>
+
+</body>
+</html>
+
+
+
+

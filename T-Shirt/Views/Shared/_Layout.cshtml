@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - T_Shirt</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+
+        nav {
+            /* margin: 35px 0; */
+            background: black;
+            height: 99px;
+            width: auto;
+            margin: auto;
+            /* margin-right: 95px; */
+        }
+
+            nav ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                position: relative;
+                float: right;
+                /* margin: auto; */
+                margin-top: 29px;
+                margin-right: 100px;
+            }
+
+                nav ul li {
+                    display: inline-block;
+                }
+
+
+                nav a:hover {
+                    background-color: #64b8ed;
+                }
+
+            nav ul ul {
+                display: none;
+                position: absolute;
+                top: 9px;
+            }
+
+            nav ul li:hover > ul {
+                display: inherit;
+            }
+
+            nav ul ul li {
+                width: 200px;
+                float: none;
+                display: list-item;
+                position: relative;
+                background: #0b0b10;
+            }
+
+            nav ul ul ul li {
+                position: relative;
+                top: -31px;
+                left: 200px;
+            }
+
+            nav ul ul li {
+                border: 1px solid white;
+            }
+
+        li > a:after {
+            content: ' ▼';
+        }
+
+        li > a:only-child:after {
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:black">
+            <div class="container">
+                <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index"><img class="rounded" src="~/pictures/logo5.jpg" width="130" height="50" alt="Alternate Text" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse  collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item ">
+                            <a class="nav-link text-white text-uppercase" style="vertical-align:middle" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" asp-area="" asp-controller="AdminPanel" asp-action="InsertProduct">Insert Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" asp-area="" asp-controller="Home" asp-action="contact">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div style="padding-left:7%;">
+                    <button class="btn btn-outline-light" onclick="location.href='@Url.Action("Signin", "Home")'">Login</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
